@@ -27,90 +27,140 @@ container2.innerHTML = `
     </button>
     <div class="chatbot2">
         <header>
-            <h2>RECLAMATION</h2>
+        <select name="typeofticket" id="typeofticket" data-label="" required="">
+                        <option value="enrole" default >Formulaire enrôlé</option>
+                        <option value="assure" >Formulaire assuré</option>
+                    </select>
+
         </header>
         <div class="chatbody2">
-        <form id="__vtigerWebForm" name="Tes" action="http://34.122.187.96/modules/Webforms/capture.php" method="post"
-    accept-charset="utf-8" enctype="multipart/form-data"><input type="hidden" name="__vtrftk"
-        value="sid:87c5b859c50b20e667db4b366551ad5ab752a618,1693492584"><input type="hidden" name="publicid"
-        value="cd2bce489150d6ad65801361d44390a0"><input type="hidden" name="urlencodeenable" value="1"><input
-        type="hidden" name="name" value="Tes">
-    <table>
-        <tbody>
-            <tr>
-                <td><input type="hidden" name="ticket_title" data-label="" value="Réclamation Formulaire Web"
-                        required=""></td>
-            </tr>
-            <tr>
-                <td><label>Priorité*</label></td>
-                <td><select name="ticketpriorities" data-label="ticketpriorities" required="">
-                        <option value="">Select Value</option>
-                        <option value="Low">Basse</option>
-                        <option value="Normal" selected="">Normale</option>
-                        <option value="High">Haute</option>
-                        <option value="Urgent">Urgente</option>
-                    </select></td>
-            </tr>
-            <tr>
-                <td><label>Statut*</label></td>
-                <td><select name="ticketstatus" data-label="ticketstatus" required="">
-                        <option value="">Select Value</option>
-                        <option value="Open" selected="">Ouvert</option>
-                        <option value="In Progress">En cours</option>
-                        <option value="Wait For Response">Attente réponse</option>
-                        <option value="Closed">Fermé</option>
-                        <option value="A analyser">A analyser</option>
-                        <option value="A traiter">A traiter</option>
-                        <option value="En cours">En cours</option>
-                        <option value="Terminé">Terminé</option>
-                        <option value="A clôturer">A clôturer</option>
-                        <option value="Non fondée">Non fondée</option>
-                    </select></td>
-            </tr>
-            <tr>
-                <td><label>N° sécurité sociale</label></td>
-                <td><input type="text" name="cf_1033" data-label="" value=""></td>
-            </tr>
-            <tr>
-                <td><label>Nom réclamant</label></td>
-                <td><input type="text" name="cf_1029" data-label="" value=""></td>
-            </tr>
-            <tr>
-                <td><label>Prénoms réclamant</label></td>
-                <td><input type="text" name="cf_1031" data-label="" value=""></td>
-            </tr>
-            <tr>
-                <td><label>E-mail</label></td>
-                <td><input type="text" name="cf_1047" data-label="" value=""></td>
-            </tr>
-            <tr>
-                <td><label>Contact téléphonique</label></td>
-                <td><input type="text" name="cf_1045" data-label="" value=""></td>
-            </tr>
-            <tr>
-                <td><label>Type de réclamation</label></td>
-                <td><select name="cf_983" data-label="label:Type+de+r%26eacute%3Bclamation">
-                        <option value="">Select Value</option>
-                        <option value="Carte non active">Carte non active</option>
-                        <option value="Droits non ouverts">Droits non ouverts</option>
-                        <option value="Rejet irrégulier de facture">Rejet irrégulier de facture</option>
-                        <option value="Code du centre non disponible">Code du centre non disponible</option>
-                        <option value="Code Etablissement erroné">Code Etablissement erroné</option>
-                        <option value="Rupture de stock des médicaments en pharmacie">Rupture de stock des médicaments
-                            en pharmacie</option>
-                        <option value="Incident sur le serveur SFTP">Incident sur le serveur SFTP</option>
-                        <option value="Retard de paiement des honoraires des OGD prestations">Retard de paiement des
-                            honoraires des OGD prestations</option>
-                    </select></td>
-            </tr>
-            <tr>
-                <td><label>Description</label></td>
-                <td><textarea name="description"></textarea></td>
-            </tr>
-        </tbody>
-    </table>
-    <input class="btn-send" type="submit" value="Envoyer">
+        <form id="__vtigerWebForm" class="formticket1" style="margin-top: 320px;" name="Ticket enrôlé" action="https://vtiger.ipscnam.ci/modules/Webforms/capture.php" method="post" accept-charset="utf-8" enctype="multipart/form-data">
+<input type="hidden" name="__vtrftk" value="sid:d59fb513d0a60e000464e01e427b744787f5ba8f,1705273266">
+<input type="hidden" name="publicid" value="ca003ecf37033297ef93356cf4dfc26f">
+<input type="hidden" name="urlencodeenable" value="1">
+<input type="hidden" name="name" value="Ticket enrôlé"><table><tbody>
+<tr><td><input type="hidden" name="ticket_title" data-label="" value="Recours enrôlé depuis le site web" required=""></td></tr>
+<tr><td><select name="ticketstatus" data-label="ticketstatus" required="" hidden=""><option value="">Select Value</option>
+<option value="">Select Value</option>
+<option value="Open">Ouvert</option>
+<option value="A analyser" selected="">A analyser</option>
+<option value="A traiter">A traiter</option>
+<option value="In Progress">En cours</option>
+<option value="Wait For Response">Terminé</option>
+<option value="A clôturer">A clôturer</option>
+<option value="Closed">Clôturé</option></select></td></tr>
+<tr><td><select name="ticketpriorities" data-label="ticketpriorities" required="" hidden="">
+<option value="">Select Value</option><option value="Low">Basse</option>
+<option value="Normal" selected="">Normale</option>
+<option value="High">Haute</option><option value="Urgent">Urgente</option></select></td></tr>
+<tr><td><select name="cf_1195" data-label="label:TYPE+DE+REQUERANT" hidden="">
+<option value="">Select Value</option>
+<option value="Enrôlé" selected="">Enrôlé</option>
+<option value="Assuré">Assuré</option>
+<option value="Anonyme">Anonyme</option></select></td></tr>
+<tr><td><label>NOM DU REQUERANT*</label></td><td><input type="text" name="cf_1163" data-label="" value="" required=""></td></tr>
+<tr><td><label>PRENOMS DU REQUERANT*</label></td>
+<td><input type="text" name="cf_1165" data-label="" value="" required=""></td></tr>
+<tr><td><label>TYPE DE RECOURS*</label></td>
+<td><select name="cf_1155" data-label="label:TYPE+DE+RECOURS" required="">
+<option value="">Select Value</option>
+<option value="Demande de services enrôlé">Demande de services enrôlé</option>
+<option value="Réclamation enrôlé">Réclamation enrôlé</option>
+</select></td></tr><tr><td><label>MOTIF DE RECOURS*</label></td>
+<td><select name="cf_1157" data-label="label:MOTIF+DE+RECOURS" required="">
+<option value="">Select Value</option><option value="RECHERCHE DE CARTE (DISPONIBILITÉ DE SA CARTE)">RECHERCHE DE CARTE (DISPONIBILITÉ DE SA CARTE)</option>
+<option value="ASSISTANCE POUR IMPRESSION DE SON RÉÇU D'ENRÔLEMENT">ASSISTANCE POUR IMPRESSION DE SON RÉÇU D'ENRÔLEMENT</option>
+<option value="CORRECTION DES INFORMATIONS / BIOMÉTRIE">CORRECTION DES INFORMATIONS / BIOMÉTRIE</option>
+<option value="PROBLÈME LIÉE AUX EMPREINTES">PROBLÈME LIÉE AUX EMPREINTES</option>
+<option value="DEMANDE DE SUIVI POUR LA NON-PRODUCTION DE SA CARTE">DEMANDE DE SUIVI POUR LA NON-PRODUCTION DE SA CARTE</option>
+<option value="RÉTARD DE PRODUCTION DE SA CARTE">RÉTARD DE PRODUCTION DE SA CARTE</option>
+<option value="L'INSATISFACTION AU NIVEAU DU PERSONNEL D'ENRÔLEMENT">L'INSATISFACTION AU NIVEAU DU PERSONNEL D'ENRÔLEMENT</option>
+<option value="ERREUR SUR LES DONNÉES BIOGRAPHIQUES">ERREUR SUR LES DONNÉES BIOGRAPHIQUES</option>
+<option value="CARTE INTROUVABLE">CARTE INTROUVABLE</option>
+<option value="INDISPONIBILITÉ DE LA PLATEFORME (MA CARTE CMU)">INDISPONIBILITÉ DE LA PLATEFORME (MA CARTE CMU)</option>
+<option value="AUTRE DEMANDE DE SERVICES">AUTRE DEMANDE DE SERVICES</option>
+<option value="AUTRE RECLAMATION">AUTRE RECLAMATION</option></select></td></tr>
+<tr><td><label>Description*</label></td><td><textarea name="description" required=""></textarea></td></tr>
+<tr><td><label>EMAIL*</label></td><td><input type="email" name="cf_1173" data-label="" value="" required=""></td></tr>
+<tr><td><label>NUMERO DE TELEPHONE*</label></td>
+<td><input type="text" name="cf_1175" data-label="" value="" required=""></td></tr>
+<tr><td><label>DATE DE CONSTAT DU PROBLÈME</label></td><td><input type="date" name="cf_1185" data-label="" value="">(yyyy-mm-dd)</td></tr>
+<tr><td><label>SITE ENROLEMENT</label></td><td><input type="text" name="cf_1287" data-label="" value=""></td></tr>
+<tr><td><label>DATE ENROLEMENT</label></td><td><input type="date" name="cf_1159" data-label="" value="">(yyyy-mm-dd)</td></tr>
+<tr><td><label>Numéro enrôlement*</label></td><td><input type="text" name="cf_1262" data-label="" value="" required=""></td></tr>
+<tr><td><label>DATE DE NAISSANCE*</label></td><td><input type="date" name="cf_1167" data-label="" value="" required="">(yyyy-mm-dd)</td></tr>
+<tr><td><label>LIEU DE NAISSANCE</label></td><td><input type="text" name="cf_1169" data-label="" value=""></td></tr>
+<tr><td><label>NUMERO DE LA PIECE IDENTITE</label></td><td><input type="text" name="cf_1171" data-label="" value=""></td></tr></tbody></table>
+<input class="btn-send" type="submit" value="Envoyer">
 </form>
+
+<form id="__vtigerWebForm" class="formticket2 hidetypeofticket" style="margin-top: 220px;" name="Ticket assuré" action="https://vtiger.ipscnam.ci/modules/Webforms/capture.php" method="post" accept-charset="utf-8" enctype="multipart/form-data">
+<input type="hidden" name="__vtrftk" value="sid:46d8fb78eb80bd2a5ce764282a68113a7954e795,1705275573">
+<input type="hidden" name="publicid" value="a4449067b0c490273f35621c8304629f">
+<input type="hidden" name="urlencodeenable" value="1">
+<input type="hidden" name="name" value="Ticket assuré">
+<table><tbody><tr><td><input type="hidden" name="ticket_title" data-label="" value="Recours assuré depuis le site web" required=""></td></tr>
+<tr><td><select name="ticketstatus" data-label="ticketstatus" required="" hidden="">
+<option value="">Select Value</option>
+<option value="Open">Ouvert</option>
+<option value="A analyser" selected="">A analyser</option>
+<option value="A traiter">A traiter</option>
+<option value="In Progress">En cours</option>
+<option value="Wait For Response">Terminé</option>
+<option value="A clôturer">A clôturer</option>
+<option value="Closed">Clôturé</option></select></td></tr>
+<tr><td><select name="ticketpriorities" data-label="ticketpriorities" required="" hidden="">
+<option value="">Select Value</option><option value="Low">Basse</option>
+<option value="Normal" selected="">Normale</option><option value="High">Haute</option>
+<option value="Urgent">Urgente</option></select></td></tr>
+<tr><td><select name="cf_1195" data-label="label:TYPE+DE+REQUERANT" hidden=""><option value="">Select Value</option>
+<option value="Enrôlé">Enrôlé</option>
+<option value="Assuré" selected="">Assuré</option>
+<option value="Anonyme">Anonyme</option></select></td></tr>
+<tr><td><label>NOM DU REQUERANT*</label></td>
+<td><input type="text" name="cf_1163" data-label="" value="" required=""></td></tr>
+<tr><td><label>PRENOMS DU REQUERANT*</label></td>
+<td><input type="text" name="cf_1165" data-label="" value="" required=""></td></tr>
+<tr><td><label>NUMÉRO DE SÉCURITÉ SOCIALE*</label></td>
+<td><input type="text" name="cf_1181" data-label="" value="" required=""></td></tr>
+<tr><td><label>TYPE DE RECOURS*</label></td>
+<td><select name="cf_1155" data-label="label:TYPE+DE+RECOURS" required=""><option value="">Select Value</option>
+<option value="Demande de services assuré">Demande de services assuré</option>
+<option value="Réclamation assuré">Réclamation assuré</option></select></td></tr>
+<tr><td><label>MOTIF DE RECOURS*</label></td>
+<td><select name="cf_1157" data-label="label:MOTIF+DE+RECOURS" required=""><option value="">Select Value</option>
+<option value="DEMANDE DE PRODUCTION DE DUPLICATA ET/OU DE RENOUVELLEMENT DE CARTE">DEMANDE DE PRODUCTION DE DUPLICATA ET/OU DE RENOUVELLEMENT DE CARTE</option>
+<option value="DEMANDE DE SUSPENSION DE LA CARTE (RQ : DEMANDÉ SI LA CARTE À ÉTÉ RÉELLEMENT SUSPENDUE)">DEMANDE DE SUSPENSION DE LA CARTE (RQ : DEMANDÉ SI LA CARTE À ÉTÉ RÉELLEMENT SUSPENDUE)</option>
+<option value="DEMANDE DE RATTACHEMENT CSP">DEMANDE DE RATTACHEMENT CSP</option>
+<option value="DEMANDE DE DÉTACHEMENT DE CSP">DEMANDE DE DÉTACHEMENT DE CSP</option>
+<option value="DEMANDE DE CHANGEMENT DE CSP">DEMANDE DE CHANGEMENT DE CSP</option>
+<option value="EMPREINTES NON CONFORMES LORS DE L’ACCÈS AUX SOINS">EMPREINTES NON CONFORMES LORS DE L’ACCÈS AUX SOINS</option>
+<option value="ACTE HABITUELLEMENT RÉALISÉ NON EFFECTUÉ CE JOUR DANS LE CENTRE">ACTE HABITUELLEMENT RÉALISÉ NON EFFECTUÉ CE JOUR DANS LE CENTRE</option>
+<option value="RETARD DANS L’ACCUEIL ET DANS LA PRISE EN CHARGE DU PATIENT">RETARD DANS L’ACCUEIL ET DANS LA PRISE EN CHARGE DU PATIENT</option>
+<option value="REFUS DE PRISE EN CHARGE SANS RAISON VALABLE">REFUS DE PRISE EN CHARGE SANS RAISON VALABLE</option>
+<option value="IMPOSSIBILITÉ D'ACCÈS AUX PRESTATIONS DUE À LA DÉFAILLANCE DES LECTEURS">IMPOSSIBILITÉ D'ACCÈS AUX PRESTATIONS DUE À LA DÉFAILLANCE DES LECTEURS</option>
+<option value="IMPOSSIBILITÉ D'ACCÈS AUX PRESTATIONS DUE À LA PÉNURIE DE FEUILLES DE SOINS">IMPOSSIBILITÉ D'ACCÈS AUX PRESTATIONS DUE À LA PÉNURIE DE FEUILLES DE SOINS</option>
+<option value="REFUS DE DISPENSATION D'UN MÉDICAMENT INSCRIT SUR LE BON">REFUS DE DISPENSATION D'UN MÉDICAMENT INSCRIT SUR LE BON</option>
+<option value="IMPOSSIBLE D'ACCÉDER À SON ESPACE ASSURÉ : MOT DE PASSE ERRONÉ">IMPOSSIBLE D'ACCÉDER À SON ESPACE ASSURÉ : MOT DE PASSE ERRONÉ</option>
+<option value="COMPTE COTISANT NON IMPACTÉ APRÈS PAIEMENT DE COTISATION PAR MOBILE MONEY">COMPTE COTISANT NON IMPACTÉ APRÈS PAIEMENT DE COTISATION PAR MOBILE MONEY</option>
+<option value="RETARD DE PRODUCTION DUPLICATA">RETARD DE PRODUCTION DUPLICATA</option>
+<option value="MESSAGE REÇU PAR ERREUR">MESSAGE REÇU PAR ERREUR</option>
+<option value="NUMÉRO SÉCU INTROUVABLE">NUMÉRO SÉCU INTROUVABLE</option>
+<option value="DIFFICULTÉ À PAYER LES COTISATIONS">DIFFICULTÉ À PAYER LES COTISATIONS</option>
+<option value="ENTREPRISE AYANT PAYÉ MAIS DONT LES DROITS DES EMPLOYÉS SONT FERMÉS">ENTREPRISE AYANT PAYÉ MAIS DONT LES DROITS DES EMPLOYÉS SONT FERMÉS</option>
+<option value="AUTRE DEMANDE DE SERVICES">AUTRE DEMANDE DE SERVICES</option>
+<option value="AUTRE RECLAMATION">AUTRE RECLAMATION</option></select></td></tr>
+<tr><td><label>Description*</label></td><td><textarea name="description" required=""></textarea></td></tr>
+<tr><td><label>DATE DE CONSTAT DU PROBLÈME</label></td><td><input type="date" name="cf_1185" data-label="" value="">(yyyy-mm-dd)</td></tr>
+<tr><td><label>EMAIL*</label></td><td><input type="email" name="cf_1173" data-label="" value="" required=""></td></tr>
+<tr><td><label>NUMERO DE TELEPHONE*</label></td><td><input type="text" name="cf_1175" data-label="" value="" required=""></td></tr>
+<tr><td><label>LIEU DE NAISSANCE</label></td><td><input type="text" name="cf_1169" data-label="" value=""></td></tr>
+<tr><td><label>DATE DE NAISSANCE*</label></td><td><input type="date" name="cf_1167" data-label="" value="" required="">(yyyy-mm-dd)</td></tr>
+<tr><td><label>NUMERO DE LA PIECE IDENTITE</label></td><td><input type="text" name="cf_1171" data-label="" value=""></td></tr></tbody></table>
+<input class="btn-send" type="submit" value="Envoyer">
+
+</form>
+
         </div>
         <span class="loader hide"></span>
     </div>
@@ -121,8 +171,14 @@ body.appendChild(container);
 body2.appendChild(container2);
 const chatbotToggler = document.querySelector(".chatbot-toggler");
 const chatbotToggler2 = document.querySelector(".chatbot-toggler2");
+const typeTicketSelector = document.querySelector("#typeofticket");
 chatbotToggler.addEventListener("click", () => document.body.classList.toggle("show-chatbot"));
 chatbotToggler2.addEventListener("click", () => document.body.classList.toggle("show-chatbot2"));
+typeTicketSelector.addEventListener("change",(e)=>{
+  document.querySelector(".formticket1").classList.toggle("hidetypeofticket");
+      document.querySelector(".formticket2").classList.toggle("hidetypeofticket");
+  console.log(e.currentTarget.value,"--",e.target.value);
+})
 
 //Ajout du css
 const style = document.createElement('style');
@@ -863,6 +919,21 @@ header h2 {
 
 .chatbody2 .btn-send:hover {
   cursor: pointer;
+}
+
+
+#typeofticket{
+  font-size: x-large;
+  font-weight: 900;
+  border: none;
+  padding: 3px;
+  border-radius: 5px;
+}
+.chatbody2{
+  overflow-y: scroll;
+}
+.hidetypeofticket{
+  display: none;
 }
 `;
 document.head.appendChild(style);

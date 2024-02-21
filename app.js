@@ -1,9 +1,9 @@
 //const IFRAME_URL="http://localhost:5500/iframe/iframe.html";
 const IFRAME_URL = "https://dev.d15tgskwr500d2.amplifyapp.com/iframe.html";
-const UID="cnam225";
+const UID = "cnam225";
 const CONFIG = {
-    title:"CNAM",
-    logo:""
+  title: "CNAM",
+  logo: ""
 };
 const container = document.createElement("div");
 const container2 = document.createElement("div");
@@ -34,11 +34,13 @@ container2.innerHTML = `
 
         </header>
         <div class="chatbody2">
-        <form id="__vtigerWebForm" class="formticket1" style="margin-top: 320px;" name="Ticket enrôlé" action="https://vtiger.ipscnam.ci/modules/Webforms/capture.php" method="post" accept-charset="utf-8" enctype="multipart/form-data">
+        <form id="__vtigerWebForm" class="formticket1" style="margin-top: 320px;" onsubmit="return verifierSoumission(event)" name="Ticket enrôlé" action="https://vtiger.ipscnam.ci/modules/Webforms/capture.php" method="post" accept-charset="utf-8" enctype="multipart/form-data">
 <input type="hidden" name="__vtrftk" value="sid:d59fb513d0a60e000464e01e427b744787f5ba8f,1705273266">
 <input type="hidden" name="publicid" value="ca003ecf37033297ef93356cf4dfc26f">
 <input type="hidden" name="urlencodeenable" value="1">
-<input type="hidden" name="name" value="Ticket enrôlé"><table><tbody>
+<input type="hidden" name="name" value="Ticket enrôlé">
+<table>
+<tbody>
 <tr><td><input type="hidden" name="ticket_title" data-label="" value="Recours enrôlé depuis le site web" required=""></td></tr>
 <tr><td><select name="ticketstatus" data-label="ticketstatus" required="" hidden=""><option value="">Select Value</option>
 <option value="">Select Value</option>
@@ -62,13 +64,17 @@ container2.innerHTML = `
 <tr><td><label>PRENOMS DU REQUERANT*</label></td>
 <td><input type="text" name="cf_1165" data-label="" value="" required=""></td></tr>
 <tr><td><label>TYPE DE RECOURS*</label></td>
-<td><select name="cf_1155" data-label="label:TYPE+DE+RECOURS" required="">
+<td>
+<select name="cf_1155" id='typeRecours1' data-label="label:TYPE+DE+RECOURS" required="">
 <option value="">Select Value</option>
 <option value="Demande de services enrôlé">Demande de services enrôlé</option>
 <option value="Réclamation enrôlé">Réclamation enrôlé</option>
-</select></td></tr><tr><td><label>MOTIF DE RECOURS*</label></td>
-<td><select name="cf_1157" data-label="label:MOTIF+DE+RECOURS" required="">
-<option value="">Select Value</option><option value="RECHERCHE DE CARTE (DISPONIBILITÉ DE SA CARTE)">RECHERCHE DE CARTE (DISPONIBILITÉ DE SA CARTE)</option>
+</select>
+</td></tr><tr><td><label>MOTIF DE RECOURS*</label></td>
+
+<td><select name="cf_1157" id="resultTypeRecours1" data-label="label:MOTIF+DE+RECOURS" required="">
+<option value="">Select Value</option>
+<option value="RECHERCHE DE CARTE (DISPONIBILITÉ DE SA CARTE)">RECHERCHE DE CARTE (DISPONIBILITÉ DE SA CARTE)</option>
 <option value="ASSISTANCE POUR IMPRESSION DE SON RÉÇU D'ENRÔLEMENT">ASSISTANCE POUR IMPRESSION DE SON RÉÇU D'ENRÔLEMENT</option>
 <option value="CORRECTION DES INFORMATIONS / BIOMÉTRIE">CORRECTION DES INFORMATIONS / BIOMÉTRIE</option>
 <option value="PROBLÈME LIÉE AUX EMPREINTES">PROBLÈME LIÉE AUX EMPREINTES</option>
@@ -79,16 +85,18 @@ container2.innerHTML = `
 <option value="CARTE INTROUVABLE">CARTE INTROUVABLE</option>
 <option value="INDISPONIBILITÉ DE LA PLATEFORME (MA CARTE CMU)">INDISPONIBILITÉ DE LA PLATEFORME (MA CARTE CMU)</option>
 <option value="AUTRE DEMANDE DE SERVICES">AUTRE DEMANDE DE SERVICES</option>
-<option value="AUTRE RECLAMATION">AUTRE RECLAMATION</option></select></td></tr>
+<option value="AUTRE RECLAMATION">AUTRE RECLAMATION</option></select></td>
+
+</tr>
 <tr><td><label>Description*</label></td><td><textarea name="description" required=""></textarea></td></tr>
 <tr><td><label>EMAIL*</label></td><td><input type="email" name="cf_1173" data-label="" value="" required=""></td></tr>
 <tr><td><label>NUMERO DE TELEPHONE*</label></td>
 <td><input type="text" name="cf_1175" data-label="" value="" required=""></td></tr>
-<tr><td><label>DATE DE CONSTAT DU PROBLÈME</label></td><td><input type="date" name="cf_1185" data-label="" value="">(yyyy-mm-dd)</td></tr>
+<tr><td><label>DATE DE CONSTAT DU PROBLÈME</label></td><td><input type="date" name="cf_1185" data-label="" value=""></td></tr>
 <tr><td><label>SITE ENROLEMENT</label></td><td><input type="text" name="cf_1287" data-label="" value=""></td></tr>
-<tr><td><label>DATE ENROLEMENT</label></td><td><input type="date" name="cf_1159" data-label="" value="">(yyyy-mm-dd)</td></tr>
+<tr><td><label>DATE ENROLEMENT</label></td><td><input type="date" name="cf_1159" data-label="" value=""></td></tr>
 <tr><td><label>Numéro enrôlement*</label></td><td><input type="text" name="cf_1262" data-label="" value="" required=""></td></tr>
-<tr><td><label>DATE DE NAISSANCE*</label></td><td><input type="date" name="cf_1167" data-label="" value="" required="">(yyyy-mm-dd)</td></tr>
+<tr><td><label>DATE DE NAISSANCE*</label></td><td><input type="date" name="cf_1167" data-label="" value="" required=""></td></tr>
 <tr><td><label>LIEU DE NAISSANCE</label></td><td><input type="text" name="cf_1169" data-label="" value=""></td></tr>
 <tr><td><label>NUMERO DE LA PIECE IDENTITE</label></td><td><input type="text" name="cf_1171" data-label="" value=""></td></tr></tbody></table>
 <input class="btn-send" type="submit" value="Envoyer">
@@ -124,11 +132,15 @@ container2.innerHTML = `
 <tr><td><label>NUMÉRO DE SÉCURITÉ SOCIALE*</label></td>
 <td><input type="text" name="cf_1181" data-label="" value="" required=""></td></tr>
 <tr><td><label>TYPE DE RECOURS*</label></td>
-<td><select name="cf_1155" data-label="label:TYPE+DE+RECOURS" required=""><option value="">Select Value</option>
+<td>
+<select name="cf_1155" id="typeRecours2" data-label="label:TYPE+DE+RECOURS" required="">
+<option value="">Select Value</option>
 <option value="Demande de services assuré">Demande de services assuré</option>
-<option value="Réclamation assuré">Réclamation assuré</option></select></td></tr>
+<option value="Réclamation assuré">Réclamation assuré</option></select>
+</td></tr>
 <tr><td><label>MOTIF DE RECOURS*</label></td>
-<td><select name="cf_1157" data-label="label:MOTIF+DE+RECOURS" required=""><option value="">Select Value</option>
+<td><select name="cf_1157" id="resultTypeRecours2" data-label="label:MOTIF+DE+RECOURS" required="">
+<option value="">Select Value</option>
 <option value="DEMANDE DE PRODUCTION DE DUPLICATA ET/OU DE RENOUVELLEMENT DE CARTE">DEMANDE DE PRODUCTION DE DUPLICATA ET/OU DE RENOUVELLEMENT DE CARTE</option>
 <option value="DEMANDE DE SUSPENSION DE LA CARTE (RQ : DEMANDÉ SI LA CARTE À ÉTÉ RÉELLEMENT SUSPENDUE)">DEMANDE DE SUSPENSION DE LA CARTE (RQ : DEMANDÉ SI LA CARTE À ÉTÉ RÉELLEMENT SUSPENDUE)</option>
 <option value="DEMANDE DE RATTACHEMENT CSP">DEMANDE DE RATTACHEMENT CSP</option>
@@ -149,13 +161,15 @@ container2.innerHTML = `
 <option value="DIFFICULTÉ À PAYER LES COTISATIONS">DIFFICULTÉ À PAYER LES COTISATIONS</option>
 <option value="ENTREPRISE AYANT PAYÉ MAIS DONT LES DROITS DES EMPLOYÉS SONT FERMÉS">ENTREPRISE AYANT PAYÉ MAIS DONT LES DROITS DES EMPLOYÉS SONT FERMÉS</option>
 <option value="AUTRE DEMANDE DE SERVICES">AUTRE DEMANDE DE SERVICES</option>
-<option value="AUTRE RECLAMATION">AUTRE RECLAMATION</option></select></td></tr>
+<option value="AUTRE RECLAMATION">AUTRE RECLAMATION</option>
+
+</select></td></tr>
 <tr><td><label>Description*</label></td><td><textarea name="description" required=""></textarea></td></tr>
-<tr><td><label>DATE DE CONSTAT DU PROBLÈME</label></td><td><input type="date" name="cf_1185" data-label="" value="">(yyyy-mm-dd)</td></tr>
+<tr><td><label>DATE DE CONSTAT DU PROBLÈME</label></td><td><input type="date" name="cf_1185" data-label="" value=""></td></tr>
 <tr><td><label>EMAIL*</label></td><td><input type="email" name="cf_1173" data-label="" value="" required=""></td></tr>
 <tr><td><label>NUMERO DE TELEPHONE*</label></td><td><input type="text" name="cf_1175" data-label="" value="" required=""></td></tr>
 <tr><td><label>LIEU DE NAISSANCE</label></td><td><input type="text" name="cf_1169" data-label="" value=""></td></tr>
-<tr><td><label>DATE DE NAISSANCE*</label></td><td><input type="date" name="cf_1167" data-label="" value="" required="">(yyyy-mm-dd)</td></tr>
+<tr><td><label>DATE DE NAISSANCE*</label></td><td><input type="date" name="cf_1167" data-label="" value="" required=""></td></tr>
 <tr><td><label>NUMERO DE LA PIECE IDENTITE</label></td><td><input type="text" name="cf_1171" data-label="" value=""></td></tr></tbody></table>
 <input class="btn-send" type="submit" value="Envoyer">
 
@@ -174,11 +188,120 @@ const chatbotToggler2 = document.querySelector(".chatbot-toggler2");
 const typeTicketSelector = document.querySelector("#typeofticket");
 chatbotToggler.addEventListener("click", () => document.body.classList.toggle("show-chatbot"));
 chatbotToggler2.addEventListener("click", () => document.body.classList.toggle("show-chatbot2"));
-typeTicketSelector.addEventListener("change",(e)=>{
+typeTicketSelector.addEventListener("change", (e) => {
   document.querySelector(".formticket1").classList.toggle("hidetypeofticket");
-      document.querySelector(".formticket2").classList.toggle("hidetypeofticket");
-  console.log(e.currentTarget.value,"--",e.target.value);
+  document.querySelector(".formticket2").classList.toggle("hidetypeofticket");
+
+  let select1 = document.getElementById("typeRecours1");
+  if (select1) {
+    select1.addEventListener("change", (e) => {
+      const choice = e.currentTarget.value;
+      
+      //console.log("choice",choice,document.getElementById("resultTypeRecours1")?.innerHTML);
+      //document.getElementById("resultTypeRecours1").innerHTML="";
+      switch (choice) {
+        case "Demande de services enrôlé":
+          document.getElementById("resultTypeRecours1").innerHTML=`
+          <option value="">Select Value</option>
+          <option value="RECHERCHE DE CARTE (DISPONIBILITÉ DE SA CARTE)">RECHERCHE DE CARTE (DISPONIBILITÉ DE SA CARTE)</option>
+          <option value="ASSISTANCE POUR IMPRESSION DE SON RÉÇU D'ENRÔLEMENT">ASSISTANCE POUR IMPRESSION DE SON RÉÇU D'ENRÔLEMENT</option>
+          <option value="CORRECTION DES INFORMATIONS / BIOMÉTRIE">CORRECTION DES INFORMATIONS / BIOMÉTRIE</option>
+          <option value="PROBLÈME LIÉE AUX EMPREINTES">PROBLÈME LIÉE AUX EMPREINTES</option>
+          <option value="AUTRE DEMANDE DE SERVICES">AUTRE DEMANDE DE SERVICES</option>
+          `;
+          break;
+        case "Réclamation enrôlé":
+          document.getElementById("resultTypeRecours1").innerHTML=`
+          <option value="">Select Value</option>
+          <option value="DEMANDE DE SUIVI POUR LA NON-PRODUCTION DE SA CARTE">DEMANDE DE SUIVI POUR LA NON-PRODUCTION DE SA CARTE</option>
+          <option value="RÉTARD DE PRODUCTION DE SA CARTE">RÉTARD DE PRODUCTION DE SA CARTE</option>
+          <option value="L'INSATISFACTION AU NIVEAU DU PERSONNEL D'ENRÔLEMENT">L'INSATISFACTION AU NIVEAU DU PERSONNEL D'ENRÔLEMENT</option>
+          <option value="ERREUR SUR LES DONNÉES BIOGRAPHIQUES">ERREUR SUR LES DONNÉES BIOGRAPHIQUES</option>
+          <option value="CARTE INTROUVABLE">CARTE INTROUVABLE</option>
+          <option value="INDISPONIBILITÉ DE LA PLATEFORME (MA CARTE CMU)">INDISPONIBILITÉ DE LA PLATEFORME (MA CARTE CMU)</option>
+          <option value="AUTRE RECLAMATION">AUTRE RECLAMATION</option>
+
+          `;
+          break;
+        default:
+          break;
+      }
+
+    });
+  }
+  let select2 = document.getElementById("typeRecours2");
+  if (select2) {
+    select2.addEventListener("change", (e) => {
+      const choice = e.currentTarget.value;
+      
+      //console.log("choice",choice,document.getElementById("resultTypeRecours1")?.innerHTML);
+      //document.getElementById("resultTypeRecours1").innerHTML="";
+      switch (choice) {
+        case "Demande de services assuré":
+          document.getElementById("resultTypeRecours2").innerHTML=`
+          <option value="">Select Value</option>
+          <option value="DEMANDE DE PRODUCTION DE DUPLICATA ET/OU DE RENOUVELLEMENT DE CARTE">DEMANDE DE PRODUCTION DE DUPLICATA ET/OU DE RENOUVELLEMENT DE CARTE</option>
+          <option value="DEMANDE DE SUSPENSION DE LA CARTE (RQ : DEMANDÉ SI LA CARTE À ÉTÉ RÉELLEMENT SUSPENDUE)">DEMANDE DE SUSPENSION DE LA CARTE (RQ : DEMANDÉ SI LA CARTE À ÉTÉ RÉELLEMENT SUSPENDUE)</option>
+          <option value="DEMANDE DE RATTACHEMENT CSP">DEMANDE DE RATTACHEMENT CSP</option>
+          <option value="DEMANDE DE DÉTACHEMENT DE CSP">DEMANDE DE DÉTACHEMENT DE CSP</option>
+          <option value="DEMANDE DE CHANGEMENT DE CSP">DEMANDE DE CHANGEMENT DE CSP</option>
+          <option value="AUTRE DEMANDE DE SERVICES">AUTRE DEMANDE DE SERVICES</option>
+          `;
+          break;
+        case "Réclamation assuré":
+          document.getElementById("resultTypeRecours2").innerHTML=`
+          <option value="">Select Value</option>
+          <option value="EMPREINTES NON CONFORMES LORS DE L’ACCÈS AUX SOINS">EMPREINTES NON CONFORMES LORS DE L’ACCÈS AUX SOINS</option>
+          <option value="ACTE HABITUELLEMENT RÉALISÉ NON EFFECTUÉ CE JOUR DANS LE CENTRE">ACTE HABITUELLEMENT RÉALISÉ NON EFFECTUÉ CE JOUR DANS LE CENTRE</option>
+          <option value="RETARD DANS L’ACCUEIL ET DANS LA PRISE EN CHARGE DU PATIENT">RETARD DANS L’ACCUEIL ET DANS LA PRISE EN CHARGE DU PATIENT</option>
+          <option value="REFUS DE PRISE EN CHARGE SANS RAISON VALABLE">REFUS DE PRISE EN CHARGE SANS RAISON VALABLE</option>
+          <option value="IMPOSSIBILITÉ D'ACCÈS AUX PRESTATIONS DUE À LA DÉFAILLANCE DES LECTEURS">IMPOSSIBILITÉ D'ACCÈS AUX PRESTATIONS DUE À LA DÉFAILLANCE DES LECTEURS</option>
+          <option value="IMPOSSIBILITÉ D'ACCÈS AUX PRESTATIONS DUE À LA PÉNURIE DE FEUILLES DE SOINS">IMPOSSIBILITÉ D'ACCÈS AUX PRESTATIONS DUE À LA PÉNURIE DE FEUILLES DE SOINS</option>
+          <option value="REFUS DE DISPENSATION D'UN MÉDICAMENT INSCRIT SUR LE BON">REFUS DE DISPENSATION D'UN MÉDICAMENT INSCRIT SUR LE BON</option>
+          <option value="IMPOSSIBLE D'ACCÉDER À SON ESPACE ASSURÉ : MOT DE PASSE ERRONÉ">IMPOSSIBLE D'ACCÉDER À SON ESPACE ASSURÉ : MOT DE PASSE ERRONÉ</option>
+          <option value="COMPTE COTISANT NON IMPACTÉ APRÈS PAIEMENT DE COTISATION PAR MOBILE MONEY">COMPTE COTISANT NON IMPACTÉ APRÈS PAIEMENT DE COTISATION PAR MOBILE MONEY</option>
+          <option value="RETARD DE PRODUCTION DUPLICATA">RETARD DE PRODUCTION DUPLICATA</option>
+          <option value="MESSAGE REÇU PAR ERREUR">MESSAGE REÇU PAR ERREUR</option>
+          <option value="NUMÉRO SÉCU INTROUVABLE">NUMÉRO SÉCU INTROUVABLE</option>
+          <option value="DIFFICULTÉ À PAYER LES COTISATIONS">DIFFICULTÉ À PAYER LES COTISATIONS</option>
+          <option value="ENTREPRISE AYANT PAYÉ MAIS DONT LES DROITS DES EMPLOYÉS SONT FERMÉS">ENTREPRISE AYANT PAYÉ MAIS DONT LES DROITS DES EMPLOYÉS SONT FERMÉS</option>
+          <option value="AUTRE RECLAMATION">AUTRE RECLAMATION</option>
+          `;
+          break;
+        default:
+          break;
+      }
+
+    });
+  }
+  console.log(e.currentTarget.value, "--", e.target.value);
 })
+
+function verifierSoumission(event) {
+  event.preventDefault();
+  alert("Formulaire soumis avec succès.");
+  // var formulaire = document.getElementById("__vtigerWebForm");
+
+  //   fetch(formulaire.action, {
+  //       method: formulaire.method,
+  //       body: new FormData(formulaire)
+  //   })
+  //   .then(response => {
+  //       if (response.ok) {
+  //           return response.json();
+  //       } else {
+  //           throw new Error('Échec de la soumission');
+  //       }
+  //   })
+  //   .then(data => {
+  //       alert("Formulaire soumis avec succès! Réponse du serveur : " + JSON.stringify(data));
+  //   })
+  //   .catch(error => {
+  //       alert("Échec de la soumission du formulaire! Erreur : " + error.message);
+  //   });
+  //alert("Formulaire soumis avec succès.");
+  //console.log("verification",e);
+}
 
 //Ajout du css
 const style = document.createElement('style');
@@ -937,5 +1060,42 @@ header h2 {
 }
 `;
 document.head.appendChild(style);
+const select1 = document.getElementById("typeRecours1");
+  if (select1) {
+    select1.addEventListener("change", (e) => {
+      const choice = e.currentTarget.value;
+      
+      //console.log("choice",choice,document.getElementById("resultTypeRecours1")?.innerHTML);
+      //document.getElementById("resultTypeRecours1").innerHTML="";
+      switch (choice) {
+        case "Demande de services enrôlé":
+          document.getElementById("resultTypeRecours1").innerHTML=`
+          <option value="">Select Value</option>
+          <option value="RECHERCHE DE CARTE (DISPONIBILITÉ DE SA CARTE)">RECHERCHE DE CARTE (DISPONIBILITÉ DE SA CARTE)</option>
+          <option value="ASSISTANCE POUR IMPRESSION DE SON RÉÇU D'ENRÔLEMENT">ASSISTANCE POUR IMPRESSION DE SON RÉÇU D'ENRÔLEMENT</option>
+          <option value="CORRECTION DES INFORMATIONS / BIOMÉTRIE">CORRECTION DES INFORMATIONS / BIOMÉTRIE</option>
+          <option value="PROBLÈME LIÉE AUX EMPREINTES">PROBLÈME LIÉE AUX EMPREINTES</option>
+          <option value="AUTRE DEMANDE DE SERVICES">AUTRE DEMANDE DE SERVICES</option>
+          `;
+          break;
+        case "Réclamation enrôlé":
+          document.getElementById("resultTypeRecours1").innerHTML=`
+          <option value="">Select Value</option>
+          <option value="DEMANDE DE SUIVI POUR LA NON-PRODUCTION DE SA CARTE">DEMANDE DE SUIVI POUR LA NON-PRODUCTION DE SA CARTE</option>
+          <option value="RÉTARD DE PRODUCTION DE SA CARTE">RÉTARD DE PRODUCTION DE SA CARTE</option>
+          <option value="L'INSATISFACTION AU NIVEAU DU PERSONNEL D'ENRÔLEMENT">L'INSATISFACTION AU NIVEAU DU PERSONNEL D'ENRÔLEMENT</option>
+          <option value="ERREUR SUR LES DONNÉES BIOGRAPHIQUES">ERREUR SUR LES DONNÉES BIOGRAPHIQUES</option>
+          <option value="CARTE INTROUVABLE">CARTE INTROUVABLE</option>
+          <option value="INDISPONIBILITÉ DE LA PLATEFORME (MA CARTE CMU)">INDISPONIBILITÉ DE LA PLATEFORME (MA CARTE CMU)</option>
+          <option value="AUTRE RECLAMATION">AUTRE RECLAMATION</option>
+
+          `;
+          break;
+        default:
+          break;
+      }
+
+    });
+  }
 
 

@@ -102,7 +102,7 @@ container2.innerHTML = `
 <input class="btn-send" type="submit" value="Envoyer">
 </form>
 
-<form id="__vtigerWebForm" class="formticket2 hidetypeofticket" style="margin-top: 220px;" name="Ticket assuré" action="https://vtiger.ipscnam.ci/modules/Webforms/capture.php" method="post" accept-charset="utf-8" enctype="multipart/form-data">
+<form id="__vtigerWebForm" class="formticket2 hidetypeofticket" style="margin-top: 220px;" onsubmit="return verifierSoumission(event)" name="Ticket assuré" action="https://vtiger.ipscnam.ci/modules/Webforms/capture.php" method="post" accept-charset="utf-8" enctype="multipart/form-data">
 <input type="hidden" name="__vtrftk" value="sid:46d8fb78eb80bd2a5ce764282a68113a7954e795,1705275573">
 <input type="hidden" name="publicid" value="a4449067b0c490273f35621c8304629f">
 <input type="hidden" name="urlencodeenable" value="1">

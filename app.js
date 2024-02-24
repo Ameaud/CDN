@@ -323,11 +323,6 @@ style.textContent = `
   font-family: "Poppins", sans-serif;
 }
 
-body {
-  background: #E3F2FD;
-  overflow: hidden;
-}
-
 .chatbot-toggler {
   position: fixed;
   bottom: 30px;

@@ -372,6 +372,7 @@ body.show-chatbot .chatbot-toggler span:last-child {
   box-shadow: 0 0 128px 0 rgba(0, 0, 0, 0.1),
     0 32px 64px -48px rgba(0, 0, 0, 0.5);
   transition: all 0.1s ease;
+  z-index:999;
 }
 
 body.show-chatbot .chatbot {
@@ -613,6 +614,7 @@ header h2 {
   box-shadow: 0 0 128px 0 rgba(0, 0, 0, 0.1),
     0 32px 64px -48px rgba(0, 0, 0, 0.5);
   transition: all 0.1s ease;
+  z-index:999;
 }
 
 body.show-chatbot2 .chatbot2 {

@@ -33,7 +33,7 @@ container2.innerHTML = `
                     </select>
 
         </header>
-        <div class="chatbody2">
+        <div class="chatbody2" style="padding-top: 332px;">
         <form id="__vtigerWebForm" class="formticket1" style="margin-top: 320px;" onsubmit="return verifierSoumission(event)" name="Ticket enrôlé" action="https://vtiger.ipscnam.ci/modules/Webforms/capture.php" method="post" accept-charset="utf-8" enctype="multipart/form-data">
 <input type="hidden" name="__vtrftk" value="sid:d59fb513d0a60e000464e01e427b744787f5ba8f,1705273266">
 <input type="hidden" name="publicid" value="ca003ecf37033297ef93356cf4dfc26f">

@@ -9,7 +9,7 @@ const container = document.createElement("div");
 const container2 = document.createElement("div");
 container.innerHTML = `
 <button class="chatbot-toggler">
-        <span class="material-symbols-rounded">mode_comment</span>
+        <span class="material-symbols-rounded">smart_toy</span>
         <span class="material-symbols-outlined">close</span>
     </button>
     <div class="chatbot">
@@ -22,7 +22,7 @@ container.innerHTML = `
 `;
 container2.innerHTML = `
 <button class="chatbot-toggler2">
-        <span class="material-symbols-rounded">mode_comment</span>
+        <span class="material-symbols-rounded">support_agent</span>
         <span class="material-symbols-outlined">close</span>
     </button>
     <div class="chatbot2">

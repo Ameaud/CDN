@@ -280,7 +280,10 @@ typeTicketSelector.addEventListener("change", (e) => {
 function verifierSoumission(event) {
   //event.preventDefault();
   alert("Formulaire soumis avec succès.");
-  location.reload();
+  setTimeout(()=>{
+    location.replace("https://cnam.voodoogroup.africa");
+  },1000);
+  
   // var formulaire = document.getElementById("__vtigerWebForm");
 
   //   fetch(formulaire.action, {

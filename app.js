@@ -714,6 +714,7 @@ header h2 {
   background-color: white;
   width: 100%;
   padding: 15px;
+  padding-top: 323px;
 }
 
 .chatbody2 {

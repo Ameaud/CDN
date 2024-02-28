@@ -278,7 +278,7 @@ typeTicketSelector.addEventListener("change", (e) => {
 })
 
 function verifierSoumission(event) {
-  event.preventDefault();
+  //event.preventDefault();
   alert("Formulaire soumis avec succès.");
   // var formulaire = document.getElementById("__vtigerWebForm");
 

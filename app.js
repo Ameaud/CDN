@@ -714,7 +714,7 @@ header h2 {
   background-color: white;
   width: 100%;
   padding: 15px;
-  padding-top: 323px;
+  padding-top: 323px !important;
 }
 
 .chatbody2 {
@@ -723,6 +723,8 @@ header h2 {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+
+  padding-top: 323px !important;
 }
 
 .chatbody2 input,
@@ -968,6 +970,7 @@ header h2 {
   background-color: white;
   width: 100%;
   padding: 15px;
+  padding-top: 323px !important;
 }
 
 

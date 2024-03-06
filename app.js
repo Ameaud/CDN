@@ -8,7 +8,7 @@ const CONFIG = {
 const container = document.createElement("div");
 const container2 = document.createElement("div");
 container.innerHTML = `
-<button class="chatbot-toggler">
+<button class="chatbot-toggler" title="Faites vos réclamations ici">
         <span class="material-symbols-rounded">smart_toy</span>
         <span class="material-symbols-outlined">close</span>
     </button>
@@ -21,7 +21,7 @@ container.innerHTML = `
     </div>
 `;
 container2.innerHTML = `
-<button class="chatbot-toggler2">
+<button class="chatbot-toggler2" title="Posez vos questions ici">
         <span class="material-symbols-rounded">support_agent</span>
         <span class="material-symbols-outlined">close</span>
     </button>
@@ -42,8 +42,8 @@ container2.innerHTML = `
 <table>
 <tbody>
 <tr><td><input type="hidden" name="ticket_title" data-label="" value="Recours enrôlé depuis le site web" required=""></td></tr>
-<tr><td><select name="ticketstatus" data-label="ticketstatus" required="" hidden=""><option value="">Select Value</option>
-<option value="">Select Value</option>
+<tr><td><select name="ticketstatus" data-label="ticketstatus" required="" hidden=""><option value="">Sélectionner une valeur</option>
+<option value="">Sélectionner une valeur</option>
 <option value="Open">Ouvert</option>
 <option value="A analyser" selected="">A analyser</option>
 <option value="A traiter">A traiter</option>
@@ -52,11 +52,11 @@ container2.innerHTML = `
 <option value="A clôturer">A clôturer</option>
 <option value="Closed">Clôturé</option></select></td></tr>
 <tr><td><select name="ticketpriorities" data-label="ticketpriorities" required="" hidden="">
-<option value="">Select Value</option><option value="Low">Basse</option>
+<option value="">Sélectionner une valeur</option><option value="Low">Basse</option>
 <option value="Normal" selected="">Normale</option>
 <option value="High">Haute</option><option value="Urgent">Urgente</option></select></td></tr>
 <tr><td><select name="cf_1195" data-label="label:TYPE+DE+REQUERANT" hidden="">
-<option value="">Select Value</option>
+<option value="">Sélectionner une valeur</option>
 <option value="Enrôlé" selected="">Enrôlé</option>
 <option value="Assuré">Assuré</option>
 <option value="Anonyme">Anonyme</option></select></td></tr>
@@ -66,14 +66,14 @@ container2.innerHTML = `
 <tr><td><label>TYPE DE RECOURS*</label></td>
 <td>
 <select name="cf_1155" id='typeRecours1' data-label="label:TYPE+DE+RECOURS" required="">
-<option value="">Select Value</option>
+<option value="">Sélectionner une valeur</option>
 <option value="Demande de services enrôlé">Demande de services enrôlé</option>
 <option value="Réclamation enrôlé">Réclamation enrôlé</option>
 </select>
 </td></tr><tr><td><label>MOTIF DE RECOURS*</label></td>
 
 <td><select name="cf_1157" id="resultTypeRecours1" data-label="label:MOTIF+DE+RECOURS" required="">
-<option value="">Select Value</option>
+<option value="">Sélectionner une valeur</option>
 <option value="RECHERCHE DE CARTE (DISPONIBILITÉ DE SA CARTE)">RECHERCHE DE CARTE (DISPONIBILITÉ DE SA CARTE)</option>
 <option value="ASSISTANCE POUR IMPRESSION DE SON RÉÇU D'ENRÔLEMENT">ASSISTANCE POUR IMPRESSION DE SON RÉÇU D'ENRÔLEMENT</option>
 <option value="CORRECTION DES INFORMATIONS / BIOMÉTRIE">CORRECTION DES INFORMATIONS / BIOMÉTRIE</option>
@@ -109,7 +109,7 @@ container2.innerHTML = `
 <input type="hidden" name="name" value="Ticket assuré">
 <table><tbody><tr><td><input type="hidden" name="ticket_title" data-label="" value="Recours assuré depuis le site web" required=""></td></tr>
 <tr><td><select name="ticketstatus" data-label="ticketstatus" required="" hidden="">
-<option value="">Select Value</option>
+<option value="">Sélectionner une valeur</option>
 <option value="Open">Ouvert</option>
 <option value="A analyser" selected="">A analyser</option>
 <option value="A traiter">A traiter</option>
@@ -118,10 +118,10 @@ container2.innerHTML = `
 <option value="A clôturer">A clôturer</option>
 <option value="Closed">Clôturé</option></select></td></tr>
 <tr><td><select name="ticketpriorities" data-label="ticketpriorities" required="" hidden="">
-<option value="">Select Value</option><option value="Low">Basse</option>
+<option value="">Sélectionner une valeur</option><option value="Low">Basse</option>
 <option value="Normal" selected="">Normale</option><option value="High">Haute</option>
 <option value="Urgent">Urgente</option></select></td></tr>
-<tr><td><select name="cf_1195" data-label="label:TYPE+DE+REQUERANT" hidden=""><option value="">Select Value</option>
+<tr><td><select name="cf_1195" data-label="label:TYPE+DE+REQUERANT" hidden=""><option value="">Sélectionner une valeur</option>
 <option value="Enrôlé">Enrôlé</option>
 <option value="Assuré" selected="">Assuré</option>
 <option value="Anonyme">Anonyme</option></select></td></tr>
@@ -134,13 +134,13 @@ container2.innerHTML = `
 <tr><td><label>TYPE DE RECOURS*</label></td>
 <td>
 <select name="cf_1155" id="typeRecours2" data-label="label:TYPE+DE+RECOURS" required="">
-<option value="">Select Value</option>
+<option value="">Sélectionner une valeur</option>
 <option value="Demande de services assuré">Demande de services assuré</option>
 <option value="Réclamation assuré">Réclamation assuré</option></select>
 </td></tr>
 <tr><td><label>MOTIF DE RECOURS*</label></td>
 <td><select name="cf_1157" id="resultTypeRecours2" data-label="label:MOTIF+DE+RECOURS" required="">
-<option value="">Select Value</option>
+<option value="">Sélectionner une valeur</option>
 <option value="DEMANDE DE PRODUCTION DE DUPLICATA ET/OU DE RENOUVELLEMENT DE CARTE">DEMANDE DE PRODUCTION DE DUPLICATA ET/OU DE RENOUVELLEMENT DE CARTE</option>
 <option value="DEMANDE DE SUSPENSION DE LA CARTE (RQ : DEMANDÉ SI LA CARTE À ÉTÉ RÉELLEMENT SUSPENDUE)">DEMANDE DE SUSPENSION DE LA CARTE (RQ : DEMANDÉ SI LA CARTE À ÉTÉ RÉELLEMENT SUSPENDUE)</option>
 <option value="DEMANDE DE RATTACHEMENT CSP">DEMANDE DE RATTACHEMENT CSP</option>
@@ -202,7 +202,7 @@ typeTicketSelector.addEventListener("change", (e) => {
       switch (choice) {
         case "Demande de services enrôlé":
           document.getElementById("resultTypeRecours1").innerHTML=`
-          <option value="">Select Value</option>
+          <option value="">Sélectionner une valeur</option>
           <option value="RECHERCHE DE CARTE (DISPONIBILITÉ DE SA CARTE)">RECHERCHE DE CARTE (DISPONIBILITÉ DE SA CARTE)</option>
           <option value="ASSISTANCE POUR IMPRESSION DE SON RÉÇU D'ENRÔLEMENT">ASSISTANCE POUR IMPRESSION DE SON RÉÇU D'ENRÔLEMENT</option>
           <option value="CORRECTION DES INFORMATIONS / BIOMÉTRIE">CORRECTION DES INFORMATIONS / BIOMÉTRIE</option>
@@ -212,7 +212,7 @@ typeTicketSelector.addEventListener("change", (e) => {
           break;
         case "Réclamation enrôlé":
           document.getElementById("resultTypeRecours1").innerHTML=`
-          <option value="">Select Value</option>
+          <option value="">Sélectionner une valeur</option>
           <option value="DEMANDE DE SUIVI POUR LA NON-PRODUCTION DE SA CARTE">DEMANDE DE SUIVI POUR LA NON-PRODUCTION DE SA CARTE</option>
           <option value="RÉTARD DE PRODUCTION DE SA CARTE">RÉTARD DE PRODUCTION DE SA CARTE</option>
           <option value="L'INSATISFACTION AU NIVEAU DU PERSONNEL D'ENRÔLEMENT">L'INSATISFACTION AU NIVEAU DU PERSONNEL D'ENRÔLEMENT</option>
@@ -239,7 +239,7 @@ typeTicketSelector.addEventListener("change", (e) => {
       switch (choice) {
         case "Demande de services assuré":
           document.getElementById("resultTypeRecours2").innerHTML=`
-          <option value="">Select Value</option>
+          <option value="">Sélectionner une valeur</option>
           <option value="DEMANDE DE PRODUCTION DE DUPLICATA ET/OU DE RENOUVELLEMENT DE CARTE">DEMANDE DE PRODUCTION DE DUPLICATA ET/OU DE RENOUVELLEMENT DE CARTE</option>
           <option value="DEMANDE DE SUSPENSION DE LA CARTE (RQ : DEMANDÉ SI LA CARTE À ÉTÉ RÉELLEMENT SUSPENDUE)">DEMANDE DE SUSPENSION DE LA CARTE (RQ : DEMANDÉ SI LA CARTE À ÉTÉ RÉELLEMENT SUSPENDUE)</option>
           <option value="DEMANDE DE RATTACHEMENT CSP">DEMANDE DE RATTACHEMENT CSP</option>
@@ -250,7 +250,7 @@ typeTicketSelector.addEventListener("change", (e) => {
           break;
         case "Réclamation assuré":
           document.getElementById("resultTypeRecours2").innerHTML=`
-          <option value="">Select Value</option>
+          <option value="">Sélectionner une valeur</option>
           <option value="EMPREINTES NON CONFORMES LORS DE L’ACCÈS AUX SOINS">EMPREINTES NON CONFORMES LORS DE L’ACCÈS AUX SOINS</option>
           <option value="ACTE HABITUELLEMENT RÉALISÉ NON EFFECTUÉ CE JOUR DANS LE CENTRE">ACTE HABITUELLEMENT RÉALISÉ NON EFFECTUÉ CE JOUR DANS LE CENTRE</option>
           <option value="RETARD DANS L’ACCUEIL ET DANS LA PRISE EN CHARGE DU PATIENT">RETARD DANS L’ACCUEIL ET DANS LA PRISE EN CHARGE DU PATIENT</option>
@@ -1074,7 +1074,7 @@ const select1 = document.getElementById("typeRecours1");
       switch (choice) {
         case "Demande de services enrôlé":
           document.getElementById("resultTypeRecours1").innerHTML=`
-          <option value="">Select Value</option>
+          <option value="">Sélectionner une valeur</option>
           <option value="RECHERCHE DE CARTE (DISPONIBILITÉ DE SA CARTE)">RECHERCHE DE CARTE (DISPONIBILITÉ DE SA CARTE)</option>
           <option value="ASSISTANCE POUR IMPRESSION DE SON RÉÇU D'ENRÔLEMENT">ASSISTANCE POUR IMPRESSION DE SON RÉÇU D'ENRÔLEMENT</option>
           <option value="CORRECTION DES INFORMATIONS / BIOMÉTRIE">CORRECTION DES INFORMATIONS / BIOMÉTRIE</option>
@@ -1084,7 +1084,7 @@ const select1 = document.getElementById("typeRecours1");
           break;
         case "Réclamation enrôlé":
           document.getElementById("resultTypeRecours1").innerHTML=`
-          <option value="">Select Value</option>
+          <option value="">Sélectionner une valeur</option>
           <option value="DEMANDE DE SUIVI POUR LA NON-PRODUCTION DE SA CARTE">DEMANDE DE SUIVI POUR LA NON-PRODUCTION DE SA CARTE</option>
           <option value="RÉTARD DE PRODUCTION DE SA CARTE">RÉTARD DE PRODUCTION DE SA CARTE</option>
           <option value="L'INSATISFACTION AU NIVEAU DU PERSONNEL D'ENRÔLEMENT">L'INSATISFACTION AU NIVEAU DU PERSONNEL D'ENRÔLEMENT</option>

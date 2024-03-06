@@ -8,9 +8,12 @@ const CONFIG = {
 const container = document.createElement("div");
 const container2 = document.createElement("div");
 container.innerHTML = `
-<button class="chatbot-toggler" title="Posez vos questions ici">
+<button class="chatbot-toggler centered-container" title="Posez vos questions ici">
         <span class="material-symbols-rounded">smart_toy</span>
         <span class="material-symbols-outlined">close</span>
+        <div class="tooltip-container">
+           <div class="tooltip-text">Posez vos questions ici</div>
+       </div>
     </button>
     <div class="chatbot">
         <header>
@@ -1062,6 +1065,48 @@ header h2 {
 .hidetypeofticket{
   display: none;
 }
+
+.centered-container {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+ }
+ 
+ .tooltip-container {
+  position: absolute;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+ }
+ 
+ .tooltip-text {
+  display: none;
+  background-color: #333;
+  color: #fff;
+  padding: 8px;
+  border-radius: 4px;
+  z-index: 1;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+ }
+ 
+ .centered-container:hover .tooltip-text {
+  display: block;
+  opacity: 1;
+ }
+ 
+ .tooltip-text::before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #333 transparent transparent transparent;
+ }
+
 `;
 document.head.appendChild(style);
 const select1 = document.getElementById("typeRecours1");

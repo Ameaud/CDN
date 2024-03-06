@@ -8,7 +8,7 @@ const CONFIG = {
 const container = document.createElement("div");
 const container2 = document.createElement("div");
 container.innerHTML = `
-<button class="chatbot-toggler" title="Faites vos réclamations ici">
+<button class="chatbot-toggler" title="Posez vos questions ici">
         <span class="material-symbols-rounded">smart_toy</span>
         <span class="material-symbols-outlined">close</span>
     </button>
@@ -21,7 +21,7 @@ container.innerHTML = `
     </div>
 `;
 container2.innerHTML = `
-<button class="chatbot-toggler2" title="Posez vos questions ici">
+<button class="chatbot-toggler2" title="Faites vos réclamations ici">
         <span class="material-symbols-rounded">support_agent</span>
         <span class="material-symbols-outlined">close</span>
     </button>

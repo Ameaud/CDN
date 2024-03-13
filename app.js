@@ -28,8 +28,8 @@ container2.innerHTML = `
     <div class="chatbot2">
         <header>
         <select name="typeofticket" id="typeofticket" data-label="" required="">
-                        <option value="enrole" default >Formulaire enrôlé</option>
-                        <option value="assure" >Formulaire assuré</option>
+                        <option value="enrole" default >AVEZ-VOUS VOTRE NUMERO D'ENROLEMENT CLIQUEZ ICI</option>
+                        <option value="assure" >AVEZ-VOUS VOTRE NUMERO DE SECURITE SOCIAL CLIQUEZ ICI</option>
                     </select>
 
         </header>
@@ -42,38 +42,38 @@ container2.innerHTML = `
 <table>
 <tbody>
 <tr><td><input type="hidden" name="ticket_title" data-label="" value="Recours enrôlé depuis le site web" required=""></td></tr>
-<tr><td><select name="ticketstatus" data-label="ticketstatus" required="" hidden=""><option value="">Sélectionner une valeur</option>
-<option value="">Sélectionner une valeur</option>
-<option value="Open">Ouvert</option>
-<option value="A analyser" selected="">A analyser</option>
-<option value="A traiter">A traiter</option>
-<option value="In Progress">En cours</option>
-<option value="Wait For Response">Terminé</option>
-<option value="A clôturer">A clôturer</option>
-<option value="Closed">Clôturé</option></select></td></tr>
+<tr><td><select name="ticketstatus" data-label="ticketstatus" required="" hidden=""><option value="">SELECTIONNER UNE VALEUR</option>
+<option value="">SELECTIONNER UNE VALEUR</option>
+<option value="Open">OUVERT</option>
+<option value="A analyser" selected="">A ANALYSER</option>
+<option value="A traiter">A TRAITER</option>
+<option value="In Progress">EN COURS</option>
+<option value="Wait For Response">TERMINE</option>
+<option value="A clôturer">A CLOTURER</option>
+<option value="Closed">CLORURE</option></select></td></tr>
 <tr><td><select name="ticketpriorities" data-label="ticketpriorities" required="" hidden="">
-<option value="">Sélectionner une valeur</option><option value="Low">Basse</option>
-<option value="Normal" selected="">Normale</option>
-<option value="High">Haute</option><option value="Urgent">Urgente</option></select></td></tr>
+<option value="">SELECTIONNER UNE VALEUR</option><option value="Low">Basse</option>
+<option value="Normal" selected="">NORMALE</option>
+<option value="High">Haute</option><option value="Urgent">URGENTE</option></select></td></tr>
 <tr><td><select name="cf_1195" data-label="label:TYPE+DE+REQUERANT" hidden="">
-<option value="">Sélectionner une valeur</option>
-<option value="Enrôlé" selected="">Enrôlé</option>
-<option value="Assuré">Assuré</option>
-<option value="Anonyme">Anonyme</option></select></td></tr>
+<option value="">SELECTIONNER UNE VALEUR</option>
+<option value="Enrôlé" selected="">ENROLE</option>
+<option value="Assuré">ASSURE</option>
+<option value="Anonyme">ANONYME</option></select></td></tr>
 <tr><td><label>NOM DU REQUERANT*</label></td><td><input type="text" name="cf_1163" data-label="" value="" required=""></td></tr>
 <tr><td><label>PRENOMS DU REQUERANT*</label></td>
 <td><input type="text" name="cf_1165" data-label="" value="" required=""></td></tr>
 <tr><td><label>TYPE DE RECOURS*</label></td>
 <td>
 <select name="cf_1155" id='typeRecours1' data-label="label:TYPE+DE+RECOURS" required="">
-<option value="">Sélectionner une valeur</option>
-<option value="Demande de services enrôlé">Demande de services enrôlé</option>
-<option value="Réclamation enrôlé">Réclamation enrôlé</option>
+<option value="">SELECTIONNER UNE VALEUR</option>
+<option value="Demande de services enrôlé">Demande de services enrôlé DEMANDE DE SERVICES ENROLE</option>
+<option value="Réclamation enrôlé">Réclamation enrôlé RECLAMATION ENROLE</option>
 </select>
 </td></tr><tr><td><label>MOTIF DE RECOURS*</label></td>
 
 <td><select name="cf_1157" id="resultTypeRecours1" data-label="label:MOTIF+DE+RECOURS" required="">
-<option value="">Sélectionner une valeur</option>
+<option value="">SELECTIONNER UNE VALEUR</option>
 <option value="RECHERCHE DE CARTE (DISPONIBILITÉ DE SA CARTE)">RECHERCHE DE CARTE (DISPONIBILITÉ DE SA CARTE)</option>
 <option value="ASSISTANCE POUR IMPRESSION DE SON RÉÇU D'ENRÔLEMENT">ASSISTANCE POUR IMPRESSION DE SON RÉÇU D'ENRÔLEMENT</option>
 <option value="CORRECTION DES INFORMATIONS / BIOMÉTRIE">CORRECTION DES INFORMATIONS / BIOMÉTRIE</option>
@@ -99,7 +99,7 @@ container2.innerHTML = `
 <tr><td><label>DATE DE NAISSANCE*</label></td><td><input type="date" name="cf_1167" data-label="" value="" required=""></td></tr>
 <tr><td><label>LIEU DE NAISSANCE</label></td><td><input type="text" name="cf_1169" data-label="" value=""></td></tr>
 <tr><td><label>NUMERO DE LA PIECE IDENTITE</label></td><td><input type="text" name="cf_1171" data-label="" value=""></td></tr></tbody></table>
-<input class="btn-send" type="submit" value="Envoyer">
+<input class="btn-send" type="submit" value="ENVOYER">
 </form>
 
 <form id="__vtigerWebForm" class="formticket2 hidetypeofticket" style="margin-top: 220px;" onsubmit="return verifierSoumission(event)" name="Ticket assuré" action="https://vtiger.ipscnam.ci/modules/Webforms/capture.php" method="post" accept-charset="utf-8" enctype="multipart/form-data">
@@ -109,22 +109,22 @@ container2.innerHTML = `
 <input type="hidden" name="name" value="Ticket assuré">
 <table><tbody><tr><td><input type="hidden" name="ticket_title" data-label="" value="Recours assuré depuis le site web" required=""></td></tr>
 <tr><td><select name="ticketstatus" data-label="ticketstatus" required="" hidden="">
-<option value="">Sélectionner une valeur</option>
-<option value="Open">Ouvert</option>
-<option value="A analyser" selected="">A analyser</option>
-<option value="A traiter">A traiter</option>
-<option value="In Progress">En cours</option>
-<option value="Wait For Response">Terminé</option>
-<option value="A clôturer">A clôturer</option>
-<option value="Closed">Clôturé</option></select></td></tr>
+<option value="">SELECTIONNER UNE VALEUR</option>
+<option value="Open">OUVERT</option>
+<option value="A analyser" selected="">A ANALYSER</option>
+<option value="A traiter">A TRAITER</option>
+<option value="In Progress">EN COURS</option>
+<option value="Wait For Response">TERMINE</option>
+<option value="A clôturer">A CLOTURER</option>
+<option value="Closed">CLOTURE</option></select></td></tr>
 <tr><td><select name="ticketpriorities" data-label="ticketpriorities" required="" hidden="">
-<option value="">Sélectionner une valeur</option><option value="Low">Basse</option>
-<option value="Normal" selected="">Normale</option><option value="High">Haute</option>
+<option value="">Sélectionner une valeur</option><option value="Low">BASSE</option>
+<option value="Normal" selected="">Normale</option><option value="High">HAUTE</option>
 <option value="Urgent">Urgente</option></select></td></tr>
-<tr><td><select name="cf_1195" data-label="label:TYPE+DE+REQUERANT" hidden=""><option value="">Sélectionner une valeur</option>
-<option value="Enrôlé">Enrôlé</option>
-<option value="Assuré" selected="">Assuré</option>
-<option value="Anonyme">Anonyme</option></select></td></tr>
+<tr><td><select name="cf_1195" data-label="label:TYPE+DE+REQUERANT" hidden=""><option value="">SELECTIONNER UNE VALEUR</option>
+<option value="Enrôlé">ENROLE</option>
+<option value="Assuré" selected="">ASSURE</option>
+<option value="Anonyme">ANOMYME</option></select></td></tr>
 <tr><td><label>NOM DU REQUERANT*</label></td>
 <td><input type="text" name="cf_1163" data-label="" value="" required=""></td></tr>
 <tr><td><label>PRENOMS DU REQUERANT*</label></td>
@@ -134,9 +134,9 @@ container2.innerHTML = `
 <tr><td><label>TYPE DE RECOURS*</label></td>
 <td>
 <select name="cf_1155" id="typeRecours2" data-label="label:TYPE+DE+RECOURS" required="">
-<option value="">Sélectionner une valeur</option>
-<option value="Demande de services assuré">Demande de services assuré</option>
-<option value="Réclamation assuré">Réclamation assuré</option></select>
+<option value="">SELECTIONNER UNE VALEUR</option>
+<option value="Demande de services assuré">DEMANDE DE SERVICES ASSURE</option>
+<option value="Réclamation assuré">RECLAMATION ASSURE</option></select>
 </td></tr>
 <tr><td><label>MOTIF DE RECOURS*</label></td>
 <td><select name="cf_1157" id="resultTypeRecours2" data-label="label:MOTIF+DE+RECOURS" required="">
@@ -164,14 +164,14 @@ container2.innerHTML = `
 <option value="AUTRE RECLAMATION">AUTRE RECLAMATION</option>
 
 </select></td></tr>
-<tr><td><label>Description*</label></td><td><textarea name="description" required=""></textarea></td></tr>
+<tr><td><label>DESCRIPTION*</label></td><td><textarea name="description" required=""></textarea></td></tr>
 <tr><td><label>DATE DE CONSTAT DU PROBLÈME</label></td><td><input type="date" name="cf_1185" data-label="" value=""></td></tr>
 <tr><td><label>EMAIL*</label></td><td><input type="email" name="cf_1173" data-label="" value="" required=""></td></tr>
 <tr><td><label>NUMERO DE TELEPHONE*</label></td><td><input type="text" name="cf_1175" data-label="" value="" required=""></td></tr>
 <tr><td><label>LIEU DE NAISSANCE</label></td><td><input type="text" name="cf_1169" data-label="" value=""></td></tr>
 <tr><td><label>DATE DE NAISSANCE*</label></td><td><input type="date" name="cf_1167" data-label="" value="" required=""></td></tr>
 <tr><td><label>NUMERO DE LA PIECE IDENTITE</label></td><td><input type="text" name="cf_1171" data-label="" value=""></td></tr></tbody></table>
-<input class="btn-send" type="submit" value="Envoyer">
+<input class="btn-send" type="submit" value="ENVOYER">
 
 </form>
 

@@ -27,7 +27,7 @@ container2.innerHTML = `
     </button>
     <div class="chatbot2">
         <header>
-        <select name="typeofticket" id="typeofticket" data-label="" required="">
+        <select name="typeofticket" id="typeofticket" data-label="" required="" style="font-size: 0.8em;">
                         <option value="enrole" default >AVEZ-VOUS VOTRE NUMERO D'ENROLEMENT CLIQUEZ ICI</option>
                         <option value="assure" >AVEZ-VOUS VOTRE NUMERO DE SECURITE SOCIAL CLIQUEZ ICI</option>
                     </select>
@@ -67,8 +67,8 @@ container2.innerHTML = `
 <td>
 <select name="cf_1155" id='typeRecours1' data-label="label:TYPE+DE+RECOURS" required="">
 <option value="">SELECTIONNER UNE VALEUR</option>
-<option value="Demande de services enrôlé">Demande de services enrôlé DEMANDE DE SERVICES ENROLE</option>
-<option value="Réclamation enrôlé">Réclamation enrôlé RECLAMATION ENROLE</option>
+<option value="Demande de services enrôlé">DEMANDE DE SERVICES ENROLE</option>
+<option value="Réclamation enrôlé">RECLAMATION ENROLE</option>
 </select>
 </td></tr><tr><td><label>MOTIF DE RECOURS*</label></td>
 
@@ -202,7 +202,7 @@ typeTicketSelector.addEventListener("change", (e) => {
       switch (choice) {
         case "Demande de services enrôlé":
           document.getElementById("resultTypeRecours1").innerHTML=`
-          <option value="">Sélectionner une valeur</option>
+          <option value="">SELECTIONNER UNE VALEUR</option>
           <option value="RECHERCHE DE CARTE (DISPONIBILITÉ DE SA CARTE)">RECHERCHE DE CARTE (DISPONIBILITÉ DE SA CARTE)</option>
           <option value="ASSISTANCE POUR IMPRESSION DE SON RÉÇU D'ENRÔLEMENT">ASSISTANCE POUR IMPRESSION DE SON RÉÇU D'ENRÔLEMENT</option>
           <option value="CORRECTION DES INFORMATIONS / BIOMÉTRIE">CORRECTION DES INFORMATIONS / BIOMÉTRIE</option>
@@ -212,7 +212,7 @@ typeTicketSelector.addEventListener("change", (e) => {
           break;
         case "Réclamation enrôlé":
           document.getElementById("resultTypeRecours1").innerHTML=`
-          <option value="">Sélectionner une valeur</option>
+          <option value="">SELECTIONNER UNE VALEUR</option>
           <option value="DEMANDE DE SUIVI POUR LA NON-PRODUCTION DE SA CARTE">DEMANDE DE SUIVI POUR LA NON-PRODUCTION DE SA CARTE</option>
           <option value="RÉTARD DE PRODUCTION DE SA CARTE">RÉTARD DE PRODUCTION DE SA CARTE</option>
           <option value="L'INSATISFACTION AU NIVEAU DU PERSONNEL D'ENRÔLEMENT">L'INSATISFACTION AU NIVEAU DU PERSONNEL D'ENRÔLEMENT</option>

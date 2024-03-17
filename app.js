@@ -337,7 +337,7 @@ style.textContent = `
 .chatbot-toggler {
   position: fixed;
   bottom: 30px;
-  right: 35px;
+  right: 45px;
   outline: none;
   border: none;
   height: 50px;
@@ -371,7 +371,7 @@ body.show-chatbot .chatbot-toggler span:last-child {
 
 .chatbot {
   position: fixed;
-  right: 45px;
+  right: 35px;
   bottom: 90px;
   border-radius: 15px;
   width: 420px;
@@ -597,7 +597,7 @@ header h2 {
 .chatbot-toggler2 {
   position: fixed;
   bottom: 30px;
-  left: 35px;
+  left: 45px;
   outline: none;
   border: none;
   height: 50px;
@@ -613,7 +613,7 @@ header h2 {
 
 .chatbot2 {
   position: fixed;
-  left: 45px;
+  left: 35px;
   bottom: 90px;
   border-radius: 15px;
   width: 420px;
@@ -763,7 +763,7 @@ header h2 {
 .chatbot-toggler2 {
   position: fixed;
   bottom: 30px;
-  left: 35px;
+  left: 45px;
   outline: none;
   border: none;
   height: 50px;

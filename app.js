@@ -126,7 +126,7 @@ container2.innerHTML = `
 <option value="A clôturer">A CLOTURER</option>
 <option value="Closed">CLOTURE</option></select></td></tr>
 <tr><td><select name="ticketpriorities" data-label="ticketpriorities" required="" hidden="">
-<option value="">Sélectionner une valeur</option><option value="Low">BASSE</option>
+<option value="">SELECTIONNER UNE VALEUR</option><option value="Low">BASSE</option>
 <option value="Normal" selected="">Normale</option><option value="High">HAUTE</option>
 <option value="Urgent">Urgente</option></select></td></tr>
 <tr><td><select name="cf_1195" data-label="label:TYPE+DE+REQUERANT" hidden=""><option value="">SELECTIONNER UNE VALEUR</option>

@@ -371,7 +371,7 @@ body.show-chatbot .chatbot-toggler span:last-child {
 
 .chatbot {
   position: fixed;
-  right: 35px;
+  right: 45px;
   bottom: 90px;
   border-radius: 15px;
   width: 420px;
@@ -613,7 +613,7 @@ header h2 {
 
 .chatbot2 {
   position: fixed;
-  left: 35px;
+  left: 45px;
   bottom: 90px;
   border-radius: 15px;
   width: 420px;

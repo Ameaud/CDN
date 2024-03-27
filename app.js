@@ -148,7 +148,7 @@ container2.innerHTML = `
 </td></tr>
 <tr><td><label>MOTIF DE RECOURS*</label></td>
 <td><select name="cf_1157" id="resultTypeRecours2" data-label="label:MOTIF+DE+RECOURS" required="">
-<option value="">Sélectionner une valeur</option>
+<option value="">SELECTIONNER UNE VALEUR</option>
 <option value="DEMANDE DE PRODUCTION DE DUPLICATA ET/OU DE RENOUVELLEMENT DE CARTE">DEMANDE DE PRODUCTION DE DUPLICATA ET/OU DE RENOUVELLEMENT DE CARTE</option>
 <option value="DEMANDE DE SUSPENSION DE LA CARTE (RQ : DEMANDÉ SI LA CARTE À ÉTÉ RÉELLEMENT SUSPENDUE)">DEMANDE DE SUSPENSION DE LA CARTE (RQ : DEMANDÉ SI LA CARTE À ÉTÉ RÉELLEMENT SUSPENDUE)</option>
 <option value="DEMANDE DE RATTACHEMENT CSP">DEMANDE DE RATTACHEMENT CSP</option>
@@ -247,7 +247,7 @@ typeTicketSelector.addEventListener("change", (e) => {
       switch (choice) {
         case "Demande de services assuré":
           document.getElementById("resultTypeRecours2").innerHTML=`
-          <option value="">Sélectionner une valeur</option>
+          <option value="">SELECTIONNER UNE VALEUR</option>
           <option value="DEMANDE DE PRODUCTION DE DUPLICATA ET/OU DE RENOUVELLEMENT DE CARTE">DEMANDE DE PRODUCTION DE DUPLICATA ET/OU DE RENOUVELLEMENT DE CARTE</option>
           <option value="DEMANDE DE SUSPENSION DE LA CARTE (RQ : DEMANDÉ SI LA CARTE À ÉTÉ RÉELLEMENT SUSPENDUE)">DEMANDE DE SUSPENSION DE LA CARTE (RQ : DEMANDÉ SI LA CARTE À ÉTÉ RÉELLEMENT SUSPENDUE)</option>
           <option value="DEMANDE DE RATTACHEMENT CSP">DEMANDE DE RATTACHEMENT CSP</option>
@@ -258,7 +258,7 @@ typeTicketSelector.addEventListener("change", (e) => {
           break;
         case "Réclamation assuré":
           document.getElementById("resultTypeRecours2").innerHTML=`
-          <option value="">Sélectionner une valeur</option>
+          <option value="">SELECTIONNER UNE VALEUR</option>
           <option value="EMPREINTES NON CONFORMES LORS DE L’ACCÈS AUX SOINS">EMPREINTES NON CONFORMES LORS DE L’ACCÈS AUX SOINS</option>
           <option value="ACTE HABITUELLEMENT RÉALISÉ NON EFFECTUÉ CE JOUR DANS LE CENTRE">ACTE HABITUELLEMENT RÉALISÉ NON EFFECTUÉ CE JOUR DANS LE CENTRE</option>
           <option value="RETARD DANS L’ACCUEIL ET DANS LA PRISE EN CHARGE DU PATIENT">RETARD DANS L’ACCUEIL ET DANS LA PRISE EN CHARGE DU PATIENT</option>
@@ -1125,7 +1125,7 @@ const select1 = document.getElementById("typeRecours1");
       switch (choice) {
         case "Demande de services enrôlé":
           document.getElementById("resultTypeRecours1").innerHTML=`
-          <option value="">Sélectionner une valeur</option>
+          <option value="">SELECTIONNER UNE VALEUR</option>
           <option value="RECHERCHE DE CARTE (DISPONIBILITÉ DE SA CARTE)">RECHERCHE DE CARTE (DISPONIBILITÉ DE SA CARTE)</option>
           <option value="ASSISTANCE POUR IMPRESSION DE SON RÉÇU D'ENRÔLEMENT">ASSISTANCE POUR IMPRESSION DE SON RÉÇU D'ENRÔLEMENT</option>
           <option value="CORRECTION DES INFORMATIONS / BIOMÉTRIE">CORRECTION DES INFORMATIONS / BIOMÉTRIE</option>
@@ -1135,7 +1135,7 @@ const select1 = document.getElementById("typeRecours1");
           break;
         case "Réclamation enrôlé":
           document.getElementById("resultTypeRecours1").innerHTML=`
-          <option value="">Sélectionner une valeur</option>
+          <option value="">SELECTIONNER UNE VALEUR</option>
           <option value="DEMANDE DE SUIVI POUR LA NON-PRODUCTION DE SA CARTE">DEMANDE DE SUIVI POUR LA NON-PRODUCTION DE SA CARTE</option>
           <option value="RÉTARD DE PRODUCTION DE SA CARTE">RÉTARD DE PRODUCTION DE SA CARTE</option>
           <option value="L'INSATISFACTION AU NIVEAU DU PERSONNEL D'ENRÔLEMENT">L'INSATISFACTION AU NIVEAU DU PERSONNEL D'ENRÔLEMENT</option>

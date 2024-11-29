@@ -1,6 +1,6 @@
 //POWERED BY MARABOOT:maraboot225@gmail.com";
 const IFRAME_URL = "https://dev.d15tgskwr500d2.amplifyapp.com/iframe.html";
-const UID = "cnam225";
+const UID = "cnam225_";
 const CONFIG = {
   title: "CNAM",
   logo: ""

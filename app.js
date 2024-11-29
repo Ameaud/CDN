@@ -1,8 +1,10 @@
 //POWERED BY MARABOOT:maraboot225@gmail.com";
-const IFRAME_URL = "https://dev.d15tgskwr500d2.amplifyapp.com/iframe_.html";
-const UID = "cnam225";
+// const IFRAME_URL = "https://dev.d15tgskwr500d2.amplifyapp.com/iframe_.html";
+const IFRAME_URL = "https://img.freepik.com/photos-gratuite/blanc-mur-ciment_1203-512.jpg";
+const UID = "cnam225_";
 const CONFIG = {
-  title: "CNAM",
+  // title: "CNAM",
+  title: "",
   logo: ""
 };
 const container = document.createElement("div");
